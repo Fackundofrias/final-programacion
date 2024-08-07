@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Stock</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <div class="crud-container">
+        <h2>Gestión de Stock</h2>
+        <form id="stockForm">
+            <input type="text" id="stockProduct" placeholder="Producto" required>
+            <input type="number" id="stockQuantity" placeholder="Cantidad" required>
+            <button type="submit">Agregar al Stock</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="stockTableBody">
+            </tbody>
+        </table>
+    </div>
+    <div id="customAlert" class="custom-alert">
+        <div class="custom-alert-content">
+            <span class="custom-alert-close" onclick="closeAlert()">&times;</span>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+    <script src="ventas.js"></script>
+</body>
+</html>

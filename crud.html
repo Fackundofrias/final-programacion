@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <div class="crud-container">
+        <h2>CRUD de Ventas</h2>
+        <form id="salesForm">
+            <select id="product" required>
+                <option value="" disabled selected>Seleccionar Producto</option>
+            </select>
+            <input type="number" id="price" placeholder="Precio" required>
+            <input type="number" id="quantity" placeholder="Cantidad" required>
+            <button type="submit">Vender</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="salesTableBody">
+            </tbody>
+        </table>
+        <h3>Stock Disponible</h3>
+        <table id="stockTable">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="stockTableBody">
+            </tbody>
+        </table>
+    </div>
+    <div id="customAlert" class="custom-alert">
+        <div class="custom-alert-content">
+            <span class="custom-alert-close" onclick="closeAlert()">&times;</span>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
